@@ -1,0 +1,102 @@
+<html>
+    <head>
+
+  <!-- Link the style sheet here -->
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+</head>
+<body>
+    <div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
+    <div class="container-fluid">
+      <h2 style="padding-right: 5%;">Dealerships</h2>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="card border rounded-0">
+    <div class="card-header p-0">
+        <div class=" text-white text-center py-2" style="background-color:darkturquoise;">
+            <h3><i class="fa fa-envelope"></i> Contact Us</h3>
+            <p class="m-0">You can contact us here</p>
+           
+        </div>
+    </div>
+    <div class="card-body p-3">
+
+        <!--Body-->
+        <div class="form-group">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-user text-black"></i></div>
+                </div>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nouf Abdo" required="">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-envelope text-black"></i></div>
+                </div>
+                <input type="email" class="form-control" id="nombre" name="email" placeholder="noufAbdo@gmail.com" required="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-comment text-black"></i></div>
+                </div>
+                <textarea class="form-control" placeholder="your Message" required=""></textarea>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <input type="submit" value="Send" class="btn btn-block rounded-0 py-2" style="background-color:darkturquoise;">
+        </div>
+    </div>
+
+<div class="card-header p-0">
+  <div class=" text-white text-center py-2" style="background-color:darkturquoise;">
+    <div class="col  text-center p-2">
+
+        <div class="col">
+         Company:  <a href="https://BestCar.com">BestCar</a>
+       
+         Address: <a href="#">4435 North America</a>
+       
+          Phone:  <a href="#">+ 879-890-9767</a>
+        </div>
+        <div class="row">
+        <div class="col">
+          Website:  <a href="https://BestCar.com">www.BestCar.com</a>
+       
+           open Hours: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
+        </div>
+    </div>
+      </div>
+</div>
+</div>
+  
+</div>
+</div>
+</body>
+</html
