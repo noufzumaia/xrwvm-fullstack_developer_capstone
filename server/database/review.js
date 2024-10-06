@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviews = new Schema({
-	id: {
+  id: {
     type: Number,
     required: true,
-	},
-	name: {
+  },
+  name: {
     type: String,
-    required: true
+    required: true,
   },
   dealership: {
     type: Number,
@@ -18,27 +18,27 @@ const reviews = new Schema({
   },
   review: {
     type: String,
-    required: true
+    required: true,
   },
   purchase: {
     type: Boolean,
-    required: true
+    required: true,
   },
   purchase_date: {
     type: String,
-    required: true
+    required: true,
   },
   car_make: {
     type: String,
-    required: true
+    required: true,
   },
   car_model: {
     type: String,
-    required: true
+    required: true,
   },
   car_year: {
     type: Number,
-    required: true
+    required: true,
   },
 });
 
