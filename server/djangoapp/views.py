@@ -70,10 +70,26 @@ def get_dealer_reviews(request, dealer_id):
     if dealer_id:
         endpoint = f"/fetchReviews/dealer/{dealer_id}"
         reviews = get_request(endpoint)
+
+        # Ensure reviews is a list
+        if not isinstance(reviews, list):
+            return JsonResponse({"status": 500, "message": "Error fetching reviews"}, status=500)
+
         for review_detail in reviews:
-            response = analyze_review_sentiments(review_detail["review"])
-            review_detail["sentiment"] = response["sentiment"]
+            try:
+                response = analyze_review_sentiments(review_detail["review"])
+                # Check if response is None or doesn't have 'sentiment'
+                if response and "sentiment" in response:
+                    review_detail["sentiment"] = response["sentiment"]
+                else:
+                    review_detail["sentiment"] = "Error analyzing sentiment"
+            except Exception as e:
+                # Log the error for debugging
+                logging.error(f"Error analyzing sentiment for review {review_detail['review']}: {e}")
+                review_detail["sentiment"] = "Error analyzing sentiment"
+
         return JsonResponse({"status": 200, "reviews": reviews})
+    
     return JsonResponse({"status": 400, "message": "Bad Request"})
 
 def get_dealer_details(request, dealer_id):
